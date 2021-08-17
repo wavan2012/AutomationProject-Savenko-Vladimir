@@ -107,4 +107,33 @@ public class Task_5 {
         Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"l_trash\"]/b")).getText(),"4");//отрезки
         driver.quit();
     }
+
+    @Test
+    public void test4() throws InterruptedException {
+        WebDriver driver = new ChromeDriver();
+        Actions actions = new Actions(driver);
+        driver.manage().window().maximize();
+        driver.get("https://www.google.com/");
+        driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")).sendKeys("Привет мир"+ Keys.ENTER);
+        actions.sendKeys(Keys.ENTER);
+        Thread.sleep(1000);
+        actions.moveToElement(driver.findElement(By.id("fbar"))).perform();
+        driver.findElement(By.xpath("//*[@id=\"rso\"]/div[7]/div/div/div/div[1]/a/h3")).click();
+        Thread.sleep(1000);
+        driver.quit();
+    }
+
+    @Test
+    public void test5() throws InterruptedException {
+        WebDriver driver = new ChromeDriver();
+        Actions actions = new Actions(driver);
+        driver.manage().window().maximize();
+        driver.get("https://www.google.com/");
+        driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")).sendKeys("//"+ Keys.ENTER);
+        actions.sendKeys(Keys.ENTER);
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"topstuff\"]/div/div/p[1]")).getText(),"По запросу // ничего не найдено. ");
+        Thread.sleep(1000);
+        driver.quit();
+    }
 }
