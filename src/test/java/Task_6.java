@@ -19,7 +19,7 @@ public class Task_6 {
         findel("cs","button.btn.btn_primary.btn_small.btn_inventory").click();
         findel("cs","div[class]>a[class]:first-child").click();
         Assert.assertEquals(findel("xp","//*[@id=\"item_4_title_link\"]/div").getText(),"Sauce Labs Backpack");
-        Assert.assertEquals(findel("xp","//*[@class=\"inventory_item_price\"]/child::text()[2]").getText(),"$29.99");
+        Assert.assertEquals(findel("xp","//*[@class=\"inventory_item_price\"]").getText(),"$29.99");
         Thread.sleep(1000);
 
     }
