@@ -19,8 +19,8 @@ public class Task_6 {
         findel("cs","button.btn.btn_primary.btn_small.btn_inventory").click();
         findel("cs","div[class]>a[class]:first-child").click();
         Assert.assertEquals(findel("xp","//*[@id=\"item_4_title_link\"]/div").getText(),"Sauce Labs Backpack");
-        Assert.assertEquals(findel("xp","//ancestor::div[@class=\"inventory_item_price\"]").getText(),"$29.99");
-        Thread.sleep(10000000);
+        Assert.assertEquals(findel("xp","//ancestor::div[@class=\"item_pricebar\"]/ child::div").getText(),"$29.99");
+        Thread.sleep(1000);
 
     }
 
