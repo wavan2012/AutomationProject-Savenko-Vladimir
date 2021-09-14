@@ -6,14 +6,14 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-public class Task_6 {
+public class Task_7 {
     private  static WebDriver chrome;
 
     @Test
     public void test1() throws InterruptedException {
-       initial("https://saucedemo.com/");
-       findel("id","user-name" ).sendKeys("standard_user");
-       findel("nm","password").sendKeys("secret_sauce");
+        initial("https://saucedemo.com/");
+        findel("id","user-name" ).sendKeys("standard_user");
+        findel("nm","password").sendKeys("secret_sauce");
         findel("cn","submit-button").click();
         findel("cs","button#add-to-cart-sauce-labs-backpack").click();
         findel("cs","button.btn.btn_primary.btn_small.btn_inventory").click();
