@@ -1,0 +1,22 @@
+#title {
+    color: grey;
+}
+
+.head {
+    border: 2px solid powderblue;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #000000;
+  padding: 8px;
+}
+
+th {
+  background-color: #dddddd;
+}
